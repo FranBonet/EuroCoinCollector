@@ -115,7 +115,8 @@ function crearImagenMoneda(moneda) {
     const codigo = moneda?.pais?.codigo_iso || '';
     const anyo = moneda?.anyo || '';
     if (imgUrl) {
-        return `<img class="coin-img" src="${imgUrl}" alt="${moneda.nombre || ''}" loading="lazy" onerror="handleCoinImgError(this,'${codigo}','${anyo}')">` ;
+        const cacheBuster = "v=1.3";
+        return `<img class="coin-img" src="${imgUrl}?${cacheBuster}" alt="${moneda.nombre || ''}" loading="lazy" onerror="handleCoinImgError(this,'${codigo}','${anyo}')">` ;
     }
     return crearSVGMoneda(codigo, anyo);
 }

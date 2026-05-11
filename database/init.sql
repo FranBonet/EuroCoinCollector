@@ -97,7 +97,7 @@ INSERT INTO pais (id_pais, nombre, codigo_iso) VALUES
 -- DATOS: 50 Monedas reales de 2€
 -- -----------------------------------------------------------
 INSERT INTO moneda (id_pais, nombre, anyo, imagen_url, tipo, precio_mercado) VALUES
-(3, 'Astérix', 2019, 'img/coins/francia_2019_asterix.jpg', 'conmemorativa', 18.50),
+(3, 'Astérix', 2019, 'img/coins/francia_2019_asterix_v2.jpg', 'conmemorativa', 18.50),
 (1, 'Caída del Muro de Berlín', 2019, 'img/coins/alemania_2019_caida_del_muro_de_be.jpg', 'conmemorativa', 2.51),
 (6, '500 Años de Fernão de Magalhães', 2019, 'img/coins/portugal_2019_500_anos_de_fernao_d.jpg', 'conmemorativa', 4.17),
 (9, '100 Años de la Constitución', 2019, 'img/coins/finlandia_2019_100_anos_de_la_const.jpg', 'conmemorativa', 3.99),

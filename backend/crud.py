@@ -63,9 +63,7 @@ def buscar_moneda_por_id(db: Session, id_moneda: int) -> Moneda | None:
 
 # ── Colección ─────────────────────────────────────────────────
 
-def obtener_coleccion(db: Session) -> list[Coleccion]:
-    """Devuelve todas las entradas de la colección con cantidad > 0."""
-    return db.query(Coleccion).filter(Coleccion.cantidad > 0).all()
+
 
 
 def obtener_coleccion_por_pais(db: Session, id_pais: int | None) -> list[Coleccion]:
