@@ -21,7 +21,7 @@ Este proyecto ha sido desarrollado utilizando un enfoque de microservicios con c
 
 ---
 
-## 🚀 Cómo probar el proyecto (Guía para el Profesor)
+## 🚀 Cómo probar el proyecto (Guía para Evaluadores y Responsables)
 
 Gracias a la implementación de **Docker**, no es necesario instalar Python, MySQL ni configurar bases de datos locales para probar esta aplicación. Todo el entorno está encapsulado.
 
@@ -38,14 +38,16 @@ Gracias a la implementación de **Docker**, no es necesario instalar Python, MyS
    ```
 
 2. **Levantar los contenedores**:
-   En la raíz del proyecto, ejecuta el siguiente comando. Docker descargará las imágenes necesarias, creará la base de datos, insertará los datos iniciales (50 monedas) e iniciará la API web.
+   En la raíz del proyecto, ejecuta el siguiente comando. Docker descargará las imágenes necesarias, creará la base de datos, insertará los datos iniciales (50 monedas) e iniciará de manera independiente el backend y el frontend.
    ```bash
-   docker-compose up --build
+   docker-compose up -d --build
    ```
 
 3. **Acceder a la aplicación**:
-   Una vez que la terminal indique que "Uvicorn running on http://0.0.0.0:8000", abre tu navegador y visita:
-   👉 **[http://localhost:8000](http://localhost:8000)**
+   Una vez que los contenedores estén corriendo, abre tu navegador y visita:
+   👉 **[http://localhost](http://localhost)**
+   
+   *(Nota: La API del backend se expone en el puerto 8000: `http://localhost:8000`)*
 
 4. **Detener la aplicación**:
    Para apagar el servidor de forma segura, presiona `Ctrl + C` en la terminal, o ejecuta en otra terminal:

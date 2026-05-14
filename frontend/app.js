@@ -2,7 +2,7 @@
    EuroCoinCollector v4 — Frontend Application
    ============================================================ */
 
-const API = '';
+const API = 'http://localhost:8000';
 let vistaFaltantes = false;
 let cachePaises = [];
 

@@ -2,7 +2,6 @@
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 
 from .routes import paises, monedas, coleccion, lista_deseos, estadisticas, exportar, intercambios
 
@@ -16,7 +15,6 @@ def crear_app() -> FastAPI:
     )
     _configurar_cors(app)
     _registrar_rutas(app)
-    _montar_frontend(app)
     return app
 
 
@@ -42,9 +40,6 @@ def _registrar_rutas(app: FastAPI) -> None:
     app.include_router(intercambios.router)
 
 
-def _montar_frontend(app: FastAPI) -> None:
-    """Monta el directorio del frontend como archivos estáticos."""
-    app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
 
 
 app = crear_app()
